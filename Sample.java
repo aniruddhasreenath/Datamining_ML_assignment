@@ -5,24 +5,46 @@ import java.util.ArrayList;
  */
 public class Sample {
 
-    public int label;
+    public String label;
 
-    public ArrayList<Integer> attributes;
+    public ArrayList<String> attributes;
 
-    public ArrayList<Integer> values;
+    public ArrayList<String> values;
 
     public boolean isTraining;
 
-    public Sample(int lab, ArrayList<Integer> attr, ArrayList<Integer> vals, boolean training){
+    public Sample(String lab, ArrayList<String> attr, ArrayList<String> vals, boolean training){
 
 
-        attributes = new ArrayList<Integer>();
-        values = new ArrayList<Integer>();
+        attributes = new ArrayList<String>();
+        values = new ArrayList<String>();
 
         isTraining = training;
         label = lab;
         attributes = attr;
         values = vals;
+    }
+
+
+    public String toString(){
+
+        String main;
+
+        main = "Label: " + label + " ";
+
+        for(int i = 0; i < attributes.size(); i++){
+            main = main + " " + attributes.get(i) + ":" + values.get(i);
+        }
+
+        if(isTraining){
+            main = main + " (TRAINING)";
+
+        }
+        else{
+            main = main +  " (TEST)";
+        }
+
+        return main;
     }
 
 
