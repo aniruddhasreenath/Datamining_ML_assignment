@@ -1,22 +1,7 @@
-import java.util.ArrayList;
-
 /**
- * Created by as17 on 11/18/16.
+ * Created by sreenath on 5/12/2016.
  */
 public class DecisionTree {
 
-    public ArrayList<Sample> sampleSpace;
-
-    public DecisionTree(ArrayList<Sample> samples){
-        sampleSpace = new ArrayList<Sample>();
-
-        sampleSpace = samples;
-    }
-
-    public void calculateGiniIndex(){
-
-
-
-    }
-
+    
 }

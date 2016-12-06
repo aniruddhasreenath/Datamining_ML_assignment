@@ -28,9 +28,14 @@ public class Driver {
         setTrainingSamples();
         setTestSamples();
 
-        System.out.println("Training set size: " + trainingSet.size() + " Test set size: " + testSet.size());
+        System.out.println("Training set size: " + trainingSet.size() + " Test set size: " + testSet.size() + "\n");
+
+        //DecisionTree newtree  = new DecisionTree(trainingSet);
+
+        DecisionTreeUtility.findBestSplittingAttribute(trainingSet, trainingSet.get(0).attributes);
 
     }
+
 
     public static void setTrainingSamples() throws IOException{
 
